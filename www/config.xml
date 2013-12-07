@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="Mark" version="1" versionCode="1">
+  <name>MarkTransport</name>
+  <author>Augusto Flávio</author>
+</widget>
