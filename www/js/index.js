@@ -48,6 +48,8 @@ var app = {
     }
 };
 
+//variaveis
+var caminho = "http://minhaempresamelhor.com.br/marktransport";
 
 //paginas 
 $('#page-viagens').live('pageshow',controllerPaginaViagens);
@@ -113,7 +115,7 @@ function preencherViagens(){
 		// alert(PES_CDPESSOA);
 		// $.onLoader();
 		$.ajax({
-			url: 'http://aspspider.ws/luansidney/WebService/MarkWebService.asmx/ConsultarViagens',
+			url: caminho+'/WebService/MarkWebService.asmx/ConsultarViagens',
 			contentType: 'application/x-www-form-urlencoded', 
 			type: 'post', 
 			data: {'PES_CDPESSOA_TAXISTA':PES_CDPESSOA},
@@ -155,7 +157,7 @@ function preencherPassageiros(){
 		var linhas = '';
 		// $.onLoader();
 		$.ajax({
-			url: 'http://aspspider.ws/luansidney/WebService/MarkWebService.asmx/ConsultarPassageirosViagem',
+			url: caminho+'/WebService/MarkWebService.asmx/ConsultarPassageirosViagem',
 			contentType: 'application/x-www-form-urlencoded', 
 			type: 'post', 
 			data: {'VIA_CDVIAGEM':viagem},
@@ -218,7 +220,7 @@ function logar(e){
 	e.preventDefault();
 	// $.onLoader();
 	$.ajax({
-		url: 'http://aspspider.ws/luansidney/WebService/MarkWebService.asmx/LogarSistema',
+		url: caminho+'/WebService/MarkWebService.asmx/LogarSistema',
 		contentType: 'application/x-www-form-urlencoded', 
 		type: 'post', 
 		data: {'usuario':$("#usuario").val(),'senha':$("#senha").val()},
@@ -280,7 +282,7 @@ function detalharPassageiro(){
 	var reserva = $.storage.getItem("reserva");
 	// $.onLoader();
 	$.ajax({
-		url: 'http://aspspider.ws/luansidney/WebService/MarkWebService.asmx/DetalharReserva',
+		url: caminho+'/WebService/MarkWebService.asmx/DetalharReserva',
 		contentType: 'application/x-www-form-urlencoded', 
 		type: 'post', 
 		data: {'RES_CDRESERVA':reserva},
