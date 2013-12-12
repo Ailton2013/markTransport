@@ -49,7 +49,8 @@ var app = {
 };
 
 //variaveis
-var caminho = "http://minhaempresamelhor.com.br/marktransport";
+// var caminho = "http://minhaempresamelhor.com.br/marktransport";
+var caminho = "http://aspspider.ws/luansidney";
 
 //paginas 
 $('#page-viagens').live('pageshow',controllerPaginaViagens);
@@ -96,12 +97,12 @@ function controllerPaginaPassageiro(){
 }
 
 function controllerEsqueceuSenha(){
-	alert("esqueceusenha");
+	// alert("esqueceusenha");
 }
 
 function controllerNovaViagem(){
 	validarAcesso(true);
-	alert("novaviagem");
+	// alert("novaviagem");
 }
 
 function preencherViagens(){
@@ -197,7 +198,7 @@ function preencherMapa() {
 function marcarMapa(){
 
       var endereco = $.storage.getItem("endereco");
-	 alert(endereco);	
+	 // alert(endereco);	
 	  var latlng = new google.maps.LatLng(-10.915235, -37.670673);   
 	  // var Options = {'latLng': latlng};
 	  var Options = {'address': endereco};
